@@ -7,7 +7,6 @@
 <h1>Todo List</h1>
 <br><br>
 
-{% include 'messages.html' %}
 
 <div class="form-group">
     <form method="post">{% csrf_token %}
@@ -19,7 +18,7 @@
 </form><br>
 {% for item in query %}
 <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-    <div class="card-header"><a class="link-dark" href="{% url 'task_detail' item.pk %}">{{ item.category }}</a>
+    <div class="card-header"><a class="link-dark" href="{% url 'TaskDetail' item.pk %}">{{ item.category }}</a>
     </div>
     <div class="card-body">
       <h5 class="card-title">{{ item.title }}</h5>
